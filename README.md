@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Productie publiceren
+
+1. Zorg voor PHP met de extensies `fileinfo`, `pdo_mysql`, `mbstring`, `openssl` en `session`.
+2. Kopieer `.env.example` naar `.env` en vul `APP_URL`, `APP_KEY` en de productie-database in.
+3. Gebruik `APP_ENV=production` en `APP_DEBUG=false`.
+4. Installeer dependencies met `composer install --no-dev --optimize-autoloader`.
+5. Voer `php artisan migrate --force` uit.
+6. Voer `php artisan optimize` en `npm run build` uit.
+7. Zet de webserver-root op de map `public` en geef `storage` en `bootstrap/cache` schrijfrechten.
+
+Klantcollecties worden niet publiek opgesomd. Deel vanuit het dashboard de persoonlijke collectie-link en stuur het wachtwoord via een apart kanaal.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
