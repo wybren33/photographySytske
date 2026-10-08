@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Bekijk een voorbeeld van een privé foto collectie van Sytske Puister Photography.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ route('example.collection') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Voorbeeldcollectie | Sytske Puister Fotografie">
+    <meta property="og:description" content="Bekijk hoe een besloten fotocollectie voor klanten eruitziet.">
+    <meta property="og:url" content="{{ route('example.collection') }}">
+    <meta property="og:image" content="{{ asset('img/homepage/Photo1.JPG') }}">
     <link rel="icon" type="image/png" href="{{ asset('img/homepage/Logo_Sytske_wit.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

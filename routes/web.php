@@ -15,6 +15,14 @@ Route::get('/voorbeeldcollectie', function () {
     return view('example-collection');
 })->name('example.collection');
 
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap')->header('Content-Type', 'application/xml');
+})->name('sitemap');
+
+Route::get('/robots.txt', function () {
+    return response("User-agent: *\nDisallow: /dashboard\nDisallow: /pages\nDisallow: /images\nDisallow: /profile\nDisallow: /media\nDisallow: /page/\nSitemap: " . route('sitemap') . "\n", 200, ['Content-Type' => 'text/plain']);
+});
+
 Route::get('/home', [TestController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {

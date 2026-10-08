@@ -15,15 +15,16 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+    <body class="font-sans antialiased">
+        <div class="flex min-h-screen flex-col items-center justify-center bg-gray-950 px-4 py-10 sm:px-6">
+            <div class="mb-8 text-center">
+                <a href="{{ route('home') }}" class="inline-block rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-4 focus:ring-offset-gray-950">
+                    <img src="{{ asset('img/homepage/Logo_Sytske_wit.png') }}" alt="Sytske Puister Photography" class="mx-auto h-auto w-32">
                 </a>
+                <p class="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">Beheeromgeving</p>
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            <div class="w-full max-w-md overflow-hidden rounded-xl border border-gray-700 bg-gray-800 px-6 py-7 shadow-2xl sm:px-8">
                 {{ $slot }}
             </div>
         </div>
